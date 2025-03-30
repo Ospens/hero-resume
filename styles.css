@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Play", sans-serif;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    min-height: 100vh; /* Минимальная высота контейнера равна высоте экрана */
+    background: linear-gradient(180deg, rgba(72, 122, 191, 0.85) 0%, rgba(224, 129, 245, 0.85) 100%);
+    padding: 16px 0;
+}
+
+.left_panel {
+    width: 430px;
+    min-width: 350px;
+    gap: 24px;
+    border-radius: 10px;
+    padding: 32px;
+    background: #C4C4C44D;
+}
+
+.user_photo_container {
+    display: flex;
+    justify-content: center;
+}
+
+.user_photo {
+    border-radius: 100px;
+}
+
+.name_and_speciality {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    gap: 4px;
+}
+
+.name {
+    font-weight: 400;
+    font-size: 24px;
+    color: #CECACA;
+}
+
+.last_name {
+    font-weight: 400;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+.specialty {
+    font-weight: 700;
+    font-size: 24px;
+    color: #CECACA;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-radius: 10px;
+    padding: 8px 16px;
+    background: #C4C4C459;
+    color: #FFFFFF;
+}
+
+.contact a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.left_common_block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 10px;
+    padding: 16px;
+    background: #C4C4C459;
+    margin-top: 8px;
+}
+
+.left_common_block_header {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.common_block_list {
+    color: #FAFAFA;
+    margin: 0;
+    padding-left: 23px;
+}
+
+.languages {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.language_level {
+    display: flex;
+    gap: 4px;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+.language_circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.language_circle_fill {
+    background: #54545499;
+}
+
+.language_circle_empty {
+    background: #CECACA;
+}
+
+.right_panel {
+    display: flex;
+    flex-direction: column;
+    width: 738px;
+    gap: 24px;
+    border-radius: 10px;
+    padding-top: 32px;
+    padding-right: 14px;
+    padding-bottom: 32px;
+    padding-left: 14px;
+    background: #FFFFFF;
+}
+
+.right_panel_places_container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.right_panel_info_header {
+    display: flex;
+    align-items: center;
+}
+
+.right_panel_info_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 164px;
+    height: 24px;
+    border-radius: 4px;
+    background: #545454;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.right_panel_info_line {
+    width: 100%;
+    border-top: 1px solid #545454;
+}
+
+.right_panel_info_content {
+    margin-top: 12px;
+}
+
+.right_panel_info_description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000CC;
+}
+
+.right_panel_place_title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #343434;
+}
+
+.right_panel_place_subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #343434;
+}
+
+.right_panel_place_date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #73808D;
+}
+
+.right_panel_place_description {
+    margin-top: 8px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100px;
+}
+
+.skill_circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #545454;
+
+    --v:calc( ((18/5) * var(--p) - 90)*1deg);
+
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    padding:4px;
+    background:
+            linear-gradient(#E7E7E7,#E7E7E7) content-box,
+            linear-gradient(var(--v), #FFFFFF     50%,transparent 0) 0/min(100%,(50 - var(--p))*100%),
+            linear-gradient(var(--v), transparent 50%,#3B5999        0) 0/min(100%,(var(--p) - 50)*100%),
+            linear-gradient(to right, #FFFFFF 50%,#3B5999 0);
+}
+
+.skill_description {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #545454;
+}
